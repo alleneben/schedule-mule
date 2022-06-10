@@ -1,10 +1,14 @@
 import { AiFillDashboard, AiFillSchedule, AiFillAppstore } from 'react-icons/ai';
 import { FaUserAlt, FaRegMoneyBillAlt } from 'react-icons/fa';
 import { IoMdNotifications } from 'react-icons/io';
+
+
+
+import { Cards, Card } from '../../components';
 import styles from "./dashboard.module.scss";
 
 const Dashboard = () => {
-    return <nav className={styles.navbar}>
+    return <><nav className={styles.navbar}>
         <div className={styles.menuItems}>
             <div className={styles.menuItem}>
                 <AiFillDashboard />
@@ -36,6 +40,16 @@ const Dashboard = () => {
             </div>
         </div>
     </nav>
+    <main className={styles.container}>
+        <Cards styles={styles}>
+            <Card styles={styles} />
+            <Card styles={styles} />
+            <Card styles={styles} />
+            <Card styles={styles} />
+        </Cards>
+    </main>
+
+    </>
 }
 
 
