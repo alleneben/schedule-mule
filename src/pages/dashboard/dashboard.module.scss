@@ -68,16 +68,16 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
     grid-gap: 5px;
 }
 
 .card {
     background-color: #fff;
     height: 400px;
-    // width: 400px;
+    // width: 300px;
     font-weight: 700;
-    line-height: 10px;
+    // line-height: 10px;
     padding: 20px;
     font-size: 12px;
     border-radius: 5px;
@@ -160,4 +160,30 @@
     height: 1px;
     background-color: #EAEAEA;
     margin-bottom: 1rem;
+}
+
+
+// @media (min-width: 600px) {
+//     .cards { grid-template-columns: repeat(2, 1fr); }
+// }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+
+// }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1400px) {
+    .cards { grid-template-columns: repeat(4, 1fr); }
 }

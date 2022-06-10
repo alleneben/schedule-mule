@@ -46,6 +46,9 @@ const Dashboard = () => {
             <Card styles={styles} />
             <Card styles={styles} />
             <Card styles={styles} />
+            <Card styles={styles} />
+            <Card styles={styles} />
+            <Card styles={styles} />
         </Cards>
     </main>
 
