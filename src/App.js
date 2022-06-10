@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="body-font font-poppins">
       <Routes>
-        <Route path="/" element={<h1>Hello</h1>} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} />
       </Routes>
     </div>
