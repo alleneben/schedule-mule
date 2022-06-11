@@ -1,11 +1,14 @@
 import { AiFillDashboard, AiFillSchedule, AiFillAppstore } from 'react-icons/ai';
 import { FaUserAlt, FaRegMoneyBillAlt } from 'react-icons/fa';
 import { IoMdNotifications } from 'react-icons/io';
+import { FiSettings } from 'react-icons/fi';
+import { FaCalendarCheck } from 'react-icons/fa';
 
 
 
-import { Cards, Card } from '../../components';
+import { Cards, Card, CardHeader, CardContent, CardFooter, JobCard, Divider } from '../../components';
 import styles from "./dashboard.module.scss";
+import Img from "../../assets/img/avatar-ali.png";
 
 const Dashboard = () => {
     return <><nav className={styles.navbar}>
@@ -41,14 +44,26 @@ const Dashboard = () => {
         </div>
     </nav>
     <main className={styles.container}>
-        <Cards styles={styles}>
-            <Card styles={styles} />
-            <Card styles={styles} />
-            <Card styles={styles} />
-            <Card styles={styles} />
-            <Card styles={styles} />
-            <Card styles={styles} />
-            <Card styles={styles} />
+        <Cards>
+            {
+                [3,5,7,9,8,].map((card,key) => <Card key={key}>
+                    <CardHeader>
+                        <div><FaCalendarCheck /> Upcoming jobs</div>
+                        <div><FiSettings /></div>
+                    </CardHeader>
+                    <CardContent>
+                        <JobCard styles={styles} Img={Img}/>
+                        <Divider styles={styles} />
+                        <JobCard styles={styles} Img={Img}/>
+                        <Divider styles={styles} />
+                        <JobCard styles={styles} Img={Img}/>
+                    </CardContent>
+                    <CardFooter>
+                        SEE ALL JOBS
+                    </CardFooter>
+                </Card>
+                )
+            }
         </Cards>
     </main>
 
