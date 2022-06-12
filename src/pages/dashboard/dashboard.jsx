@@ -46,7 +46,7 @@ const Dashboard = () => {
     <main className={styles.container}>
         <Cards>
             {
-                [3,5,7,9,8,].map((card,key) => <Card key={key}>
+                [3,4,6,5].map((card,key) => <Card key={key}>
                     <CardHeader>
                         <div><FaCalendarCheck /> Upcoming jobs</div>
                         <div><FiSettings /></div>

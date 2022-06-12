@@ -1,9 +1,10 @@
 import styles from "./card.module.scss";
 
-const CardHeader = ({ children }) => {
+const CardHeader = (props) => {
 
-    return <div className={styles.cardHead}>
-            { children }
+
+    return <div className={`${styles.cardHead}`}>
+            { props.children }
     </div>
 }
 

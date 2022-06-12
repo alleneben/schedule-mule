@@ -8,6 +8,10 @@ import JobCard from "./card/jobCard";
 
 import Divider from "./divider/divider";
 
+
+import InputField from "./form-controls/inputField";
+import SelectField from "./form-controls/selectField";
+
 export {
     Card,
     CardContent,
@@ -17,5 +21,9 @@ export {
 
     JobCard,
 
-    Divider
+    Divider,
+
+
+    InputField,
+    SelectField
 }
